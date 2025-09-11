@@ -1,6 +1,6 @@
 local HttpService = game:GetService("HttpService")
 
-local URL = "https://raw.githubusercontent.com/GabrielAstock/DBS-Data/main/MetrolineNEWEDS/Single%20Decker%20(LV%20Green).luau"
+local URL = "https://raw.githubusercontent.com/GabrielAstock/MTB/refs/heads/main/128x32/datalist.lua"
 
 -- Make the request to the GitHub URL
 local response = HttpService:GetAsync(URL)
