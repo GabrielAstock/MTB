@@ -2,8 +2,8 @@
 
 function show(front,sideL,side)
 	script.Parent.Front.L.Image1.Value = front
-	script.Parent.SideL.R.Image1.Value = sideL
-	script.Parent.RearL.R.Image1.Value = sideL
+	script.Parent.SideL.R.Route.Image = sideL
+	script.Parent.RearL.R.Route.Image = sideL
 	script.Parent.Side.R.Image1.Value = side
 	script.Parent.Rear.R.Image1.Value = side
 
@@ -98,16 +98,16 @@ while wait() do
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "NY" then
 		show("rbxassetid://87371768846643","rbxassetid://135607655383714","https://assetgame.roblox.com/asset/?id=14657903604&assetName=MTB %281%29")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "F" then
 		show("http://www.roblox.com/asset/?id=99906753303762","http://www.roblox.com/asset/?id=80164965370016","http://www.roblox.com/asset/?id=78374830451494")
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "DV" then
 		show("http://www.roblox.com/asset/?id=138675944544725","http://www.roblox.com/asset/?id=116023104710321","")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "BR" then
 		show("http://www.roblox.com/asset/?id=138359745705728","http://www.roblox.com/asset/?id=104178642391573","")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "BRT" then
 		show("http://www.roblox.com/asset/?id=122285779951977","http://www.roblox.com/asset/?id=77536606467151","")
 		wait(4)
@@ -146,12 +146,12 @@ while wait() do
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "53HZ" then
 		show("https://assetgame.roblox.com/asset/?id=78266147183687&assetName=53HZ","rbxassetid://78534438016103",'https://assetgame.roblox.com/asset/?id=126959512781928&assetName=53H')
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "56W" then
 		show("http://www.roblox.com/asset/?id=111558866143513","rbxassetid://88876233688987","https://assetgame.roblox.com/asset/?id=18651577187&assetName=56")
 		wait(4)
-		
-		
+
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "56X" then
 		show("http://www.roblox.com/asset/?id=101382928549452","rbxassetid://76889137253134","https://assetgame.roblox.com/asset/?id=18651577187&assetName=56")
 		wait(4)
@@ -172,7 +172,7 @@ while wait() do
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "N56Z" then
 		show("rbxassetid://101349511422071","rbxassetid://101351081304140","http://www.roblox.com/asset/?id=137979566248695")
-	
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "356Y" then
 		show("https://assetgame.roblox.com/asset/?id=79218809903170&assetName=356Y","https://assetgame.roblox.com/asset/?id=137799319970138&assetName=356Y %281%29","rbxassetid://100299085358080")
 
@@ -190,7 +190,7 @@ while wait() do
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "70AZ" then
 		show("https://assetgame.roblox.com/asset/?id=14657552311&assetName=70AZ","rbxassetid://95904339230824","https://assetgame.roblox.com/asset/?id=14657856335&assetName=70A")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "70BW" then
 		show("rbxassetid://117177611898918","rbxassetid://77121885182191","https://assetgame.roblox.com/asset/?id=14657856082&assetName=70B")
 
@@ -214,7 +214,7 @@ while wait() do
 
 	elseif script.Parent.Model.Rt.R.Num.Text == 'N70Z' then
 		show("rbxassetid://112549209027612","rbxassetid://82979366033610","rbxassetid://72706107023599")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "91AY" then
 		show("rbxassetid://88378601466945","rbxassetid://120112743107313","https://assetgame.roblox.com/asset/?id=14657855835&assetName=91A")
 		wait(4)
@@ -226,7 +226,7 @@ while wait() do
 		wait(4)
 		show("rbxassetid://76713703646967","rbxassetid://70392927269240","https://assetgame.roblox.com/asset/?id=14657855835&assetName=91A")
 		wait(4)
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "91BY" then
 		show("rbxassetid://121034780127456","rbxassetid://125250433971163","rbxassetid://82037198055558")
 		wait(4)
@@ -286,7 +286,7 @@ while wait() do
 		wait(4)
 		show("rbxassetid://119204861517466","rbxassetid://90268666907863","https://assetgame.roblox.com/asset/?id=14657854623&assetName=93A")
 		wait(4)
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "93CY" then
 		show("rbxassetid://139261939522411","rbxassetid://115800415372364","rbxassetid://131406405660722")
 		wait(4)
@@ -294,7 +294,7 @@ while wait() do
 		wait(4)
 		show("rbxassetid://93928749267784","rbxassetid://123640718952899","rbxassetid://131406405660722")
 		wait(4)
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "93CZ" then
 		show("rbxassetid://118459982292538","rbxassetid://138033972320818","rbxassetid://131406405660722")
 		wait(4)
@@ -369,7 +369,7 @@ while wait() do
 		wait(4)
 		show("rbxassetid://107772049579699","rbxassetid://100654340439511","rbxassetid://110753327838160")
 		wait(4)
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "94CY" then
 		show("rbxassetid://103188559434052","rbxassetid://94216420269719","rbxassetid://82423317215673")
 		wait(4)
@@ -401,14 +401,14 @@ while wait() do
 		wait(4)
 		show("rbxassetid://87296302390221","rbxassetid://136779253050850","rbxassetid://103933698603663")
 		wait(4)
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "94XY" then
 		show("rbxassetid://81265612748861","rbxassetid://122211604831463","rbxassetid://129994051384920")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "94XZ" then
 		show("rbxassetid://76285263149659","rbxassetid://119017995618304","rbxassetid://129994051384920")
-		
-		
+
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "N94Y" then
 		show("https://assetgame.roblox.com/asset/?id=18651747034&assetName=N94Y","rbxassetid://111333960132866","https://assetgame.roblox.com/asset/?id=18651747739&assetName=N94")
 
@@ -456,10 +456,10 @@ while wait() do
 		wait(4)
 		show("https://assetgame.roblox.com/asset/?id=18650806319&assetName=96BY","rbxassetid://81464455488990","https://assetgame.roblox.com/asset/?id=14657853399&assetName=96B")
 		wait(4)
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "96EY" then
 		show("rbxassetid://108843975484361","rbxassetid://134310074645869","rbxassetid://130179461589680")
-		
+
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "96EZ" then
 		show("rbxassetid://102945805938178","rbxassetid://95455602304023","rbxassetid://130179461589680")
@@ -477,12 +477,12 @@ while wait() do
 		wait(4)
 		show("http://www.roblox.com/asset/?id=103099015633796","rbxassetid://89297394963212","https://assetgame.roblox.com/asset/?id=14657853086&assetName=96X")
 		wait(4)
-		
+
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "96XZ" then
 		show("http://www.roblox.com/asset/?id=78350396668660","rbxassetid://101791803086546","https://assetgame.roblox.com/asset/?id=14657853086&assetName=96X")
 		wait(4)
-		
+
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "N96Y" then
 		show("https://assetgame.roblox.com/asset/?id=14657537294&assetName=N96Y","rbxassetid://119453067727094","https://assetgame.roblox.com/asset/?id=14657849998&assetName=N96")
@@ -514,7 +514,7 @@ while wait() do
 		wait(4)
 		show("rbxassetid://119636062163755","rbxassetid://114866230583057","https://assetgame.roblox.com/asset/?id=14657852357&assetName=98A")
 		wait(4)
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "98AZ" then
 		show("rbxassetid://131621068437591","rbxassetid://133189558370705","https://assetgame.roblox.com/asset/?id=14657852357&assetName=98A")
 		wait(4)
@@ -528,13 +528,13 @@ while wait() do
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "98BZ" then
 		show("rbxassetid://105057282798933","rbxassetid://115907741005700","https://assetgame.roblox.com/asset/?id=14657852102&assetName=98B")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "98DW" then		
 		show("rbxassetid://96671416520682","rbxassetid://101203868281053","rbxassetid://99630280405917")
 		wait(4)
 		show("rbxassetid://88406139800253","rbxassetid://127885489671965","rbxassetid://99630280405917")
 		wait(4)
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "98DX" then		
 		show("rbxassetid://115024373762496","rbxassetid://104492789821634","rbxassetid://99630280405917")
 		wait(4)
@@ -562,7 +562,7 @@ while wait() do
 		wait(4)
 		show("rbxassetid://138495739028811","rbxassetid://117428675151087","rbxassetid://99630280405917")
 		wait(4)
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "98FY" then
 		show("rbxassetid://90788585875154","rbxassetid://124560820566367","rbxassetid://87597597790088")
 
@@ -586,7 +586,7 @@ while wait() do
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "N98Z" then
 		show("https://assetgame.roblox.com/asset/?id=14657536664&assetName=N98Z","rbxassetid://120683496561791","https://assetgame.roblox.com/asset/?id=14657849740&assetName=N98")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "M70Y" then
 		show("rbxassetid://103838646001139","rbxassetid://115152106649593","rbxassetid://125397458440891")
 		wait(4)
@@ -598,7 +598,7 @@ while wait() do
 		wait(4)
 		show("rbxassetid://102458886363352","rbxassetid://106082547306280","rbxassetid://125397458440891")
 		wait(4)
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "SL1Y" then
 		show("rbxassetid://106861770432992","rbxassetid://119487791303143","rbxassetid://136708649079382")
 		wait(4)
@@ -608,7 +608,7 @@ while wait() do
 		wait(4)
 		show("rbxassetid://114429504510579","rbxassetid://96435825454823","rbxassetid://136708649079382")
 		wait(4)
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "SL1Z" then
 		show("rbxassetid://106861770432992","rbxassetid://119487791303143","rbxassetid://136708649079382")
 		wait(4)
@@ -618,7 +618,7 @@ while wait() do
 		wait(4)
 		show("rbxassetid://114429504510579","rbxassetid://96435825454823","rbxassetid://136708649079382")
 		wait(4)
-		
+
 		--Airport	
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "100Y" then
@@ -635,44 +635,44 @@ while wait() do
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "101Z" then
 		show("rbxassetid://18766179715","rbxassetid://99415076032508","https://assetgame.roblox.com/asset/?id=14657851167&assetName=101")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "110Y" then
 		show("rbxassetid://104101365653120","rbxassetid://92101205175429","rbxassetid://105947925277794")
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "110Z" then
 		show("rbxassetid://73273176574464","rbxassetid://74333105305867","rbxassetid://105947925277794")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "111Y" then
 		show("rbxassetid://80872086276521","rbxassetid://137345332923397","rbxassetid://96767839267494")
 		wait(4)
 		show("rbxassetid://88161848673029","rbxassetid://101144228317206","rbxassetid://96767839267494")
 		wait(4)
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "111Z" then
 		show("rbxassetid://96501361263722","rbxassetid://117831324739483","rbxassetid://96767839267494")
 		wait(4)
 		show("rbxassetid://88161848673029","rbxassetid://101144228317206","rbxassetid://96767839267494")
 		wait(4)
-		
-	
-		
+
+
+
 		--Event	
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "300Y" then
 		show("rbxassetid://135326363379569","rbxassetid://130778553151914","rbxassetid://118892193013855")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "353Y" then
 		show("https://assetgame.roblox.com/asset/?id=107211373802227&assetName=353Y","rbxassetid://100665412273811","https://assetgame.roblox.com/asset/?id=102943986261890&assetName=353")
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "353Z" then
 		show("https://assetgame.roblox.com/asset/?id=99905638075603&assetName=353Z","rbxassetid://119011863000535",'https://assetgame.roblox.com/asset/?id=102943986261890&assetName=353')
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "370Y" then
 		show("rbxassetid://101060237995428","rbxassetid://126526062749751","rbxassetid://84884920304936")
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "370Z" then
 		show("rbxassetid://118788990626439","rbxassetid://130793965676037",'rbxassetid://84884920304936')
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "375Y" then
 		show("https://assetgame.roblox.com/asset/?id=14657540143&assetName=375Y","rbxassetid://128361399426806","https://assetgame.roblox.com/asset/?id=14657850812&assetName=375")
 		wait(4)
@@ -723,10 +723,10 @@ while wait() do
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "570Z" then
 		show("rbxassetid://127413348161299","rbxassetid://130508644055225","rbxassetid://129109144014505")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "592Y" then
 		show("rbxassetid://110568947897520","rbxassetid://115178331409948","http://www.roblox.com/asset/?id=73049531146239")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "592Z" then
 		show("http://www.roblox.com/asset/?id=101366441098436","rbxassetid://134834315508594","http://www.roblox.com/asset/?id=73049531146239")
 
@@ -735,13 +735,13 @@ while wait() do
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "594Z" then
 		show("https://assetgame.roblox.com/asset/?id=18651417587&assetName=594Z","rbxassetid://94823347099357","https://assetgame.roblox.com/asset/?id=18651416971&assetName=594")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "598Y" then
 		show("http://www.roblox.com/asset/?id=103266404161047","rbxassetid://74293084455357","http://www.roblox.com/asset/?id=112086133153962")
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "598Z" then
 		show("http://www.roblox.com/asset/?id=122013288512148","rbxassetid://127222297823871","http://www.roblox.com/asset/?id=112086133153962")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "599Y" then
 		show("rbxassetid://81392870493714","rbxassetid://78687551824072","rbxassetid://70680081500839")	
 
@@ -824,10 +824,10 @@ while wait() do
 
 
 		--================= NF DATAS ==================
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "WDE" then
 		show("rbxassetid://103198466572605","rbxassetid://82019707749935","rbxassetid://74798080452116")
-		
+
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "241Y" then
 		show("https://assetgame.roblox.com/asset/?id=14657788534&assetName=241Y","rbxassetid://128135552851835","https://assetgame.roblox.com/asset/?id=14657937849&assetName=241")
@@ -927,7 +927,7 @@ while wait() do
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "U2Y" then
 		show("rbxassetid://77075485602893","rbxassetid://107827115225610","rbxassetid://107827115225610")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "U2Z" then
 		show("rbxassetid://77075485602893","rbxassetid://107827115225610","rbxassetid://107827115225610")
 
@@ -1028,26 +1028,26 @@ while wait() do
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "ASIA" then
 		show("https://assetgame.roblox.com/asset/?id=14657805483&assetName=ASIA","https://assetgame.roblox.com/asset/?id=14682892834&assetName=ASIA %281%29","")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "114514" then
 		show("http://www.roblox.com/asset/?id=104091928597350","http://www.roblox.com/asset/?id=84411320668600","http://www.roblox.com/asset/?id=136140828158608")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "1001" then
 		show("rbxassetid://103382091568951","rbxassetid://140307135873846","")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "404" then
 		show("rbxassetid://78483001431692","rbxassetid://127006729554140","")
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "1002" then
 		show("rbxassetid://82800990847467","rbxassetid://79461146791000","")
 		wait(4)
 		show("rbxassetid://113900170741165","rbxassetid://130391824182891","")
 		wait(4)
-		
+
 	elseif script.Parent.Model.Rt.R.Num.Text == "MTB1" then
 		show("rbxassetid://79461564101194","rbxassetid://88440297289538","https://assetgame.roblox.com/asset/?id=14657903604&assetName=MTB %281%29")
-		
-		
+
+
 
 	else show("https://assetgame.roblox.com/asset/?id=14657683475&assetName=MTB","https://assetgame.roblox.com/asset/?id=14683245338&assetName=MTB %282%29","https://assetgame.roblox.com/asset/?id=14657903604&assetName=MTB %281%29")
 		--script.Parent.Back.R.Num.Text = script.Parent.Model.Rt.R.Num.Text
