@@ -16,7 +16,7 @@ while wait() do
 
 
 	if script.Parent.Model.Rt.R.Num.Text == "V" then
-		show("rbxassetid://138368402155883","rbxassetid://117689665932806","rbxassetid://97473604412689")
+		show("rbxassetid://85133117438285","rbxassetid://109914191188687","rbxassetid://130375978687080")
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "NIS" then
 		show("https://assetgame.roblox.com/asset/?id=14657683006&assetName=NIS %281%29","https://assetgame.roblox.com/asset/?id=14683244875&assetName=NIS %282%29","https://assetgame.roblox.com/asset/?id=14657903604&assetName=MTB %281%29")
@@ -37,7 +37,7 @@ while wait() do
 		show("https://assetgame.roblox.com/asset/?id=14657684527&assetName=FS","https://assetgame.roblox.com/asset/?id=14683246007&assetName=FS %281%29","https://assetgame.roblox.com/asset/?id=14657903604&assetName=MTB %281%29")
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "T" then
-		show("https://assetgame.roblox.com/asset/?id=14657680342&assetName=T","https://assetgame.roblox.com/asset/?id=14683414085&assetName=T -     ","https://assetgame.roblox.com/asset/?id=14657903604&assetName=MTB %281%29")
+		show("https://assetgame.roblox.com/asset/?id=14657680342&assetName=T","https://assetgame.roblox.com/asset/?id=14683414085&assetName=T - 複製","https://assetgame.roblox.com/asset/?id=14657903604&assetName=MTB %281%29")
 		wait(4)
 		show("rbxassetid://77321187579977","rbxassetid://140088569384773","https://assetgame.roblox.com/asset/?id=14657903604&assetName=MTB %281%29","https://assetgame.roblox.com/asset/?id=14657903604&assetName=MTB %281%29")
 		wait(4)
@@ -133,6 +133,14 @@ while wait() do
 		show("https://assetgame.roblox.com/asset/?id=14657527833&assetName=MFD","https://assetgame.roblox.com/asset/?id=14657971833&assetName=MFD %282%29","https://assetgame.roblox.com/asset/?id=14657840776&assetName=MFD %281%29")
 
 
+
+
+
+
+
+
+
+
 		--Hanwick Data
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "1S" then
@@ -171,7 +179,7 @@ while wait() do
 		wait(4)
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "N56Z" then
-		show("rbxassetid://101349511422071","rbxassetid://101351081304140","http://www.roblox.com/asset/?id=137979566248695")
+		show("rbxassetid://73432908208503","rbxassetid://101351081304140","http://www.roblox.com/asset/?id=137979566248695")
 	
 	elseif script.Parent.Model.Rt.R.Num.Text == "356Y" then
 		show("https://assetgame.roblox.com/asset/?id=79218809903170&assetName=356Y","https://assetgame.roblox.com/asset/?id=137799319970138&assetName=356Y %281%29","rbxassetid://100299085358080")
@@ -725,7 +733,7 @@ while wait() do
 		show("rbxassetid://127413348161299","rbxassetid://130508644055225","rbxassetid://129109144014505")
 		
 	elseif script.Parent.Model.Rt.R.Num.Text == "592Y" then
-		show("rbxassetid://110568947897520","rbxassetid://115178331409948","http://www.roblox.com/asset/?id=73049531146239")
+		show("rbxassetid://127413348161299","rbxassetid://115178331409948","http://www.roblox.com/asset/?id=73049531146239")
 		
 	elseif script.Parent.Model.Rt.R.Num.Text == "592Z" then
 		show("http://www.roblox.com/asset/?id=101366441098436","rbxassetid://134834315508594","http://www.roblox.com/asset/?id=73049531146239")
@@ -991,7 +999,7 @@ while wait() do
 		show("https://assetgame.roblox.com/asset/?id=14657806677&assetName=701","https://assetgame.roblox.com/asset/?id=14682893733&assetName=701 %281%29","https://assetgame.roblox.com/asset/?id=14657903604&assetName=MTB %281%29")
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "702" then
-		show("https://assetgame.roblox.com/asset/?id=14657806335&assetName=702","https://assetgame.roblox.com/asset/?id=14683434506&assetName=702 -     ","https://assetgame.roblox.com/asset/?id=14657903604&assetName=MTB %281%29")
+		show("https://assetgame.roblox.com/asset/?id=14657806335&assetName=702","https://assetgame.roblox.com/asset/?id=14683434506&assetName=702 - 複製","https://assetgame.roblox.com/asset/?id=14657903604&assetName=MTB %281%29")
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "703" then
 		show("https://assetgame.roblox.com/asset/?id=14657806011&assetName=703","https://assetgame.roblox.com/asset/?id=14682893245&assetName=703 %281%29","https://assetgame.roblox.com/asset/?id=14657903604&assetName=MTB %281%29")
