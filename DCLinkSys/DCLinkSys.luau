@@ -24,7 +24,7 @@ local function sendSpeedWebhook(playerName, playerId, modelName, speed, licenseP
 	local data = {
 		["embeds"] = {{
 			["title"] = "🚨 Speeding Violation",
-			["description"] = "Driver maintained excessive speeds for over 1 seconds.",
+			["description"] = "Driver maintained excessive speeds for over 10 seconds.",
 			["color"] = 16711680, -- Red
 			["fields"] = {
 				{ ["name"] = "Driver", ["value"] = playerName, ["inline"] = true },
@@ -59,7 +59,7 @@ while true do
 	local speed = math.floor(scaling * rawVelocity)
 
 --overspeed
-	if speed > 75 and speed < 120 then  
+	if speed > 75 and speed < 135 then  
 		timeSpentSpeeding = timeSpentSpeeding + dt
 
 --time check
