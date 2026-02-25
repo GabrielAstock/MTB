@@ -78,7 +78,7 @@ end
 -- Updated to .Body (Capital B)
 local displayLabel = busModel.Body.Display.Model.Rt.R.Num
 
--- This listens specifically for the "Text" property to change
+
 displayLabel:GetPropertyChangedSignal("Text"):Connect(function()
 	local newText = displayLabel.Text
 	if newText == "" or newText == " " then
@@ -112,19 +112,19 @@ end)
 while true do
 	local dt = task.wait(0.1)
 
-	-- We steal the exact scaling formula from your gauge script:
+
 	local scaling = (3/7.784) * 1.09728 
 
-	-- We grab the raw velocity of the bus, which is what the gauge uses behind the scenes:
+
 	local rawVelocity = driveSeat.AssemblyLinearVelocity.Magnitude
 
-	-- We do the exact same math.floor the gauge does, so the numbers match 1:1
+
 	local speed = math.floor(scaling * rawVelocity)
 
-	if speed > 70 then  
+	if speed > 75 then  
 		timeSpentSpeeding = timeSpentSpeeding + dt
 
-		if timeSpentSpeeding >= 5 then
+		if timeSpentSpeeding >= 10 then
 			if not onCooldown then
 				onCooldown = true
 
