@@ -59,7 +59,7 @@ while true do
 	local speed = math.floor(scaling * rawVelocity)
 
 --overspeed
-	if speed > 75 then  
+	if speed > 75 and speed < 180 then  
 		timeSpentSpeeding = timeSpentSpeeding + dt
 
 --time check
