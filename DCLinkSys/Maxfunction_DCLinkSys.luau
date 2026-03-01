@@ -25,7 +25,7 @@ local function sendSpeedWebhook(playerName, playerId, modelName, speed, licenseP
 	local data = {
 		["embeds"] = {{
 			["title"] = "🚨 Speeding Violation",
-			["description"] = "Driver maintained excessive speeds for over 1 seconds.",
+			["description"] = "Driver maintained excessive speeds for over 10 seconds.",
 			["color"] = 16711680, -- Red
 			["fields"] = {
 				{ ["name"] = "Driver", ["value"] = playerName, ["inline"] = true },
