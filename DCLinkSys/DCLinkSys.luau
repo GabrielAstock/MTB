@@ -1,6 +1,6 @@
  -- ==========================================
 -- VIP SERVER CHECK
-if game.PrivateServerId ~= "" then
+--if game.PrivateServerId ~= "" then
 	script:Destroy()
 	return
 end
