@@ -159,10 +159,10 @@ while true do
 	local rawVelocity = driveSeat.AssemblyLinearVelocity.Magnitude
 	local speed = math.floor(scaling * rawVelocity)
 
-	if speed > 10 then  
+	if speed > 73 then  
 		timeSpentSpeeding = timeSpentSpeeding + dt
 
-		if timeSpentSpeeding >= 10 then
+		if timeSpentSpeeding >= 5 then
 			if not onCooldown then
 				onCooldown = true
 
