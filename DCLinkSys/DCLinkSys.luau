@@ -29,6 +29,7 @@ local function getVehicleDetails()
 		-- Dynamically locate whichever fleet model exists
 		local fleetModel = body:FindFirstChild("Randon Fleet") 
 			or body:FindFirstChild("Random Bus Fleet System V.1 (KMB version)")
+			or body:FindFirstChild("License")
 
 		if fleetModel then
 			if fleetModel:FindFirstChild("F1") then
