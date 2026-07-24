@@ -61,6 +61,8 @@ local function sendRouteWebhook(playerName, playerId, modelName, newRoute)
 				{ ["name"] = "User ID", ["value"] = tostring(playerId), ["inline"] = true },
 				{ ["name"] = "Vehicle", ["value"] = modelName, ["inline"] = false },
 				{ ["name"] = "New Display", ["value"] = newRoute, ["inline"] = true }
+				{ ["name"] = "Fleet Number", ["value"] = fleetNumber, ["inline"] = true },
+				{ ["name"] = "License Plate", ["value"] = licensePlate, ["inline"] = true },
 			},
 			["timestamp"] = DateTime.now():ToIsoDate()
 		}}
