@@ -1,15 +1,15 @@
- -- ==========================================
--- VIP SERVER CHECK
---if game.PrivateServerId ~= "" then
-	--script:Destroy()
-	--return
---end
 -- ==========================================
+-- VIP SERVER CHECK
+-- ==========================================
+-- if game.PrivateServerId ~= "" then
+-- 	script:Destroy()
+-- 	return
+-- end
 
 local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
 
--- IMPORTANT: Paste your ID and Token back in!
+-- Replace this with your actual webhook URL
 local WEBHOOK_URL = "https://discord.com/api/webhooks/1474256118762176554/3cVZVBZf9WvLHzbbPYg97OC2yeVXFE5Uxz3QyEENBFQUw9EObaoA70hBZnWdxvJ3JmSU"
 
 local busModel = script.Parent.Parent 
@@ -17,6 +17,25 @@ local driveSeat = script.Parent
 
 local onCooldown = false
 local timeSpentSpeeding = 0 
+
+-- Helper function to retrieve vehicle details safely
+local function getVehicleDetails()
+	local plateStr = "Unknown"
+	local fleetStr = "Unknown"
+	local routeStr = "Unknown"
+
+	pcall(function()
+		plateStr = busModel.Body["Randon Fleet"].F1.SurfaceGui.Text.Text
+		fleetStr = busModel.Body["Randon Fleet"].FN.SurfaceGui.Text.Text
+		routeStr = busModel.Body.Display.Model.Rt.R.Num.Text
+	end)
+
+	if plateStr == "" or plateStr == " " then plateStr = "Blank" end
+	if fleetStr == "" or fleetStr == " " then fleetStr = "Blank" end
+	if routeStr == "" or routeStr == " " then routeStr = "Blank" end
+
+	return plateStr, fleetStr, routeStr
+end
 
 -- ==========================================
 -- WEBHOOK 1: SPEEDING
@@ -51,7 +70,7 @@ end
 -- ==========================================
 -- WEBHOOK 2: ROUTE CHANGED
 -- ==========================================
-local function sendRouteWebhook(playerName, playerId, modelName, newRoute)
+local function sendRouteWebhook(playerName, playerId, modelName, newRoute, licensePlate, fleetNumber)
 	local data = {
 		["embeds"] = {{
 			["title"] = "🚏 Route Display Updated",
@@ -60,26 +79,26 @@ local function sendRouteWebhook(playerName, playerId, modelName, newRoute)
 				{ ["name"] = "Driver", ["value"] = playerName, ["inline"] = true },
 				{ ["name"] = "User ID", ["value"] = tostring(playerId), ["inline"] = true },
 				{ ["name"] = "Vehicle", ["value"] = modelName, ["inline"] = false },
-				{ ["name"] = "New Display", ["value"] = newRoute, ["inline"] = true }
+				{ ["name"] = "New Display", ["value"] = newRoute, ["inline"] = true },
 				{ ["name"] = "Fleet Number", ["value"] = fleetNumber, ["inline"] = true },
-				{ ["name"] = "License Plate", ["value"] = licensePlate, ["inline"] = true },
+				{ ["name"] = "License Plate", ["value"] = licensePlate, ["inline"] = true }
 			},
 			["timestamp"] = DateTime.now():ToIsoDate()
 		}}
 	}
 
 	local jsonData = HttpService:JSONEncode(data)
-	pcall(function()
+	local success, err = pcall(function()
 		HttpService:PostAsync(WEBHOOK_URL, jsonData, Enum.HttpContentType.ApplicationJson)
 	end)
+
+	if not success then warn("Webhook failed: " .. tostring(err)) end
 end
 
 -- ==========================================
 -- ROUTE CHANGE DETECTOR
 -- ==========================================
--- Updated to .Body (Capital B)
 local displayLabel = busModel.Body.Display.Model.Rt.R.Num
-
 
 displayLabel:GetPropertyChangedSignal("Text"):Connect(function()
 	local newText = displayLabel.Text
@@ -102,9 +121,10 @@ displayLabel:GetPropertyChangedSignal("Text"):Connect(function()
 	end
 
 	local busName = busModel.Name
+	local plateStr, fleetStr, _ = getVehicleDetails()
 
 	task.spawn(function()
-		sendRouteWebhook(driverName, driverId, busName, newText)
+		sendRouteWebhook(driverName, driverId, busName, newText, plateStr, fleetStr)
 	end)
 end)
 
@@ -114,13 +134,8 @@ end)
 while true do
 	local dt = task.wait(0.1)
 
-
 	local scaling = (3/7.784) * 1.09728 
-
-
 	local rawVelocity = driveSeat.AssemblyLinearVelocity.Magnitude
-
-
 	local speed = math.floor(scaling * rawVelocity)
 
 	if speed > 75 then  
@@ -145,19 +160,7 @@ while true do
 				end
 
 				local busName = busModel.Name
-				local plateStr = "Unknown"
-				local fleetStr = "Unknown"
-				local routeStr = "Unknown" 
-
-				pcall(function()
-					plateStr = busModel.Body["Randon Fleet"].F1.SurfaceGui.Text.Text
-					fleetStr = busModel.Body["Randon Fleet"].FN.SurfaceGui.Text.Text
-					routeStr = busModel.Body.Display.Model.Rt.R.Num.Text
-				end)
-
-				if plateStr == "" or plateStr == " " then plateStr = "Blank" end
-				if fleetStr == "" or fleetStr == " " then fleetStr = "Blank" end
-				if routeStr == "" or routeStr == " " then routeStr = "Blank" end
+				local plateStr, fleetStr, routeStr = getVehicleDetails()
 
 				task.spawn(function()
 					sendSpeedWebhook(driverName, driverId, busName, speed, plateStr, fleetStr, routeStr)
