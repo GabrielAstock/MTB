@@ -150,7 +150,7 @@ while true do
 	local rawVelocity = driveSeat.AssemblyLinearVelocity.Magnitude
 	local speed = math.floor(scaling * rawVelocity)
 
-	if speed > 75 then  
+	if speed > 10 then  
 		timeSpentSpeeding = timeSpentSpeeding + dt
 
 		if timeSpentSpeeding >= 10 then
