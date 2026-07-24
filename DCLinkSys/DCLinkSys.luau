@@ -32,16 +32,24 @@ local function getVehicleDetails()
 			or body:FindFirstChild("License")
 
 		if fleetModel then
-			if fleetModel:FindFirstChild("F1") then
+			if fleetModel:FindFirstChild("F1") and fleetModel.F1:FindFirstChild("SurfaceGui") then
 				plateStr = fleetModel.F1.SurfaceGui.Text.Text
 			end
-			if fleetModel:FindFirstChild("FN") then
+			if fleetModel:FindFirstChild("FN") and fleetModel.FN:FindFirstChild("SurfaceGui") then
 				fleetStr = fleetModel.FN.SurfaceGui.Text.Text
 			end
 		end
 
-		-- Route display check
-		routeStr = body.Display.Model.Rt.R.Num.Text
+		-- Route display check with fallback checks
+		local numLabel = body:FindFirstChild("Display")
+			and body.Display:FindFirstChild("Model")
+			and body.Display.Model:FindFirstChild("Rt")
+			and body.Display.Model.Rt:FindFirstChild("R")
+			and body.Display.Model.Rt.R:FindFirstChild("Num")
+
+		if numLabel then
+			routeStr = numLabel.Text
+		end
 	end)
 
 	if plateStr == "" or plateStr == " " then plateStr = "Blank" end
