@@ -18,16 +18,29 @@ local driveSeat = script.Parent
 local onCooldown = false
 local timeSpentSpeeding = 0 
 
--- Helper function to retrieve vehicle details safely
 local function getVehicleDetails()
 	local plateStr = "Unknown"
 	local fleetStr = "Unknown"
 	local routeStr = "Unknown"
 
 	pcall(function()
-		plateStr = busModel.Body["Randon Fleet"].F1.SurfaceGui.Text.Text
-		fleetStr = busModel.Body["Randon Fleet"].FN.SurfaceGui.Text.Text
-		routeStr = busModel.Body.Display.Model.Rt.R.Num.Text
+		local body = busModel.Body
+		
+		-- Dynamically locate whichever fleet model exists
+		local fleetModel = body:FindFirstChild("Randon Fleet") 
+			or body:FindFirstChild("Random Bus Fleet System V.1 (KMB version)")
+
+		if fleetModel then
+			if fleetModel:FindFirstChild("F1") then
+				plateStr = fleetModel.F1.SurfaceGui.Text.Text
+			end
+			if fleetModel:FindFirstChild("FN") then
+				fleetStr = fleetModel.FN.SurfaceGui.Text.Text
+			end
+		end
+
+		-- Route display check
+		routeStr = body.Display.Model.Rt.R.Num.Text
 	end)
 
 	if plateStr == "" or plateStr == " " then plateStr = "Blank" end
@@ -36,7 +49,6 @@ local function getVehicleDetails()
 
 	return plateStr, fleetStr, routeStr
 end
-
 -- ==========================================
 -- WEBHOOK 1: SPEEDING
 -- ==========================================
