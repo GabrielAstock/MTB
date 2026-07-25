@@ -9,6 +9,17 @@
 local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
 
+local MarketplaceService = game:GetService("MarketplaceService")
+
+-- Fetch game name safely (falls back to PlaceId if lookup fails)
+local gameName = "Unknown Experience"
+pcall(function()
+	local info = MarketplaceService:GetProductInfo(game.PlaceId)
+	gameName = info.Name
+end)
+
+local placeLink = "https://www.roblox.com/games/" .. tostring(game.PlaceId)
+
 -- Replace this with your actual webhook URL
 local WEBHOOK_URL = "https://discord.com/api/webhooks/1474256118762176554/3cVZVBZf9WvLHzbbPYg97OC2yeVXFE5Uxz3QyEENBFQUw9EObaoA70hBZnWdxvJ3JmSU"
 
@@ -17,6 +28,13 @@ local driveSeat = script.Parent
 
 local onCooldown = false
 local timeSpentSpeeding = 0 
+
+-- Fetch game name safely
+local gameName = "Unknown Experience"
+pcall(function()
+	local info = MarketplaceService:GetProductInfo(game.PlaceId)
+	gameName = info.Name
+end)
 
 local function getVehicleDetails()
 	local plateStr = "Unknown"
@@ -58,6 +76,7 @@ local function getVehicleDetails()
 
 	return plateStr, fleetStr, routeStr
 end
+
 -- ==========================================
 -- WEBHOOK 1: SPEEDING
 -- ==========================================
@@ -65,11 +84,12 @@ local function sendSpeedWebhook(playerName, playerId, modelName, speed, licenseP
 	local data = {
 		["embeds"] = {{
 			["title"] = "🚨 Speeding Violation",
-			["description"] = "Driver maintained excessive speeds for over 10 seconds.",
+			["description"] = "Driver maintained excessive speeds for over 5 seconds.",
 			["color"] = 16711680, -- Red
 			["fields"] = {
 				{ ["name"] = "Driver", ["value"] = playerName, ["inline"] = true },
 				{ ["name"] = "User ID", ["value"] = tostring(playerId), ["inline"] = true },
+				{ ["name"] = "Experience", ["value"] = "[" .. gameName .. "](https://www.roblox.com/games/" .. tostring(game.PlaceId) .. ")", ["inline"] = false },
 				{ ["name"] = "Vehicle", ["value"] = modelName, ["inline"] = false },
 				{ ["name"] = "Route/Display", ["value"] = routeDisplay, ["inline"] = true },
 				{ ["name"] = "Fleet Number", ["value"] = fleetNumber, ["inline"] = true },
@@ -99,6 +119,7 @@ local function sendRouteWebhook(playerName, playerId, modelName, newRoute, licen
 			["fields"] = {
 				{ ["name"] = "Driver", ["value"] = playerName, ["inline"] = true },
 				{ ["name"] = "User ID", ["value"] = tostring(playerId), ["inline"] = true },
+				{ ["name"] = "Experience", ["value"] = "[" .. gameName .. "](https://www.roblox.com/games/" .. tostring(game.PlaceId) .. ")", ["inline"] = false },
 				{ ["name"] = "Vehicle", ["value"] = modelName, ["inline"] = false },
 				{ ["name"] = "New Display", ["value"] = newRoute, ["inline"] = true },
 				{ ["name"] = "Fleet Number", ["value"] = fleetNumber, ["inline"] = true },
