@@ -50,15 +50,28 @@ local function getVehicleDetails()
 			or body:FindFirstChild("License")
 
 		if fleetModel then
-			if fleetModel:FindFirstChild("F1") and fleetModel.F1:FindFirstChild("SurfaceGui") then
-				plateStr = fleetModel.F1.SurfaceGui.Text.Text or fleetModel.F1.SurfaceGui.TextLabel.Text
+			-- 1. FETCH LICENSE PLATE (F1)
+			local f1 = fleetModel:FindFirstChild("F1")
+			if f1 and f1:FindFirstChild("SurfaceGui") then
+				local gui = f1.SurfaceGui
+				local textObj = gui:FindFirstChild("Text") or gui:FindFirstChild("TextLabel")
+				if textObj then
+					plateStr = textObj.Text
+				end
 			end
-			if fleetModel:FindFirstChild("FN") and fleetModel.FN:FindFirstChild("SurfaceGui") then
-				fleetStr = fleetModel.FN.SurfaceGui.Text.Text or fleetModel.FN1.SurfaceGui.TextLabel.Text
+
+			-- 2. FETCH FLEET NUMBER (FN / FN1)
+			local fn = fleetModel:FindFirstChild("FN") or fleetModel:FindFirstChild("FN1")
+			if fn and fn:FindFirstChild("SurfaceGui") then
+				local gui = fn.SurfaceGui
+				local textObj = gui:FindFirstChild("Text") or gui:FindFirstChild("TextLabel")
+				if textObj then
+					fleetStr = textObj.Text
+				end
 			end
 		end
 
-		-- Route display check with fallback checks
+		-- Route display check
 		local numLabel = body:FindFirstChild("Display")
 			and body.Display:FindFirstChild("Model")
 			and body.Display.Model:FindFirstChild("Rt")
@@ -70,6 +83,7 @@ local function getVehicleDetails()
 		end
 	end)
 
+	-- Clean up empty spaces
 	if plateStr == "" or plateStr == " " then plateStr = "Blank" end
 	if fleetStr == "" or fleetStr == " " then fleetStr = "Blank" end
 	if routeStr == "" or routeStr == " " then routeStr = "Blank" end
