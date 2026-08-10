@@ -60,7 +60,7 @@ local function getVehicleDetails()
 				end
 			end
 
-			-- 2. FETCH FLEET NUMBER (FN / FN1)
+			-- 2. FETCH FLEET NUMBER (Checks FN first, then FN1 if FN doesn't exist)
 			local fn = fleetModel:FindFirstChild("FN") or fleetModel:FindFirstChild("FN1")
 			if fn and fn:FindFirstChild("SurfaceGui") then
 				local gui = fn.SurfaceGui
@@ -71,7 +71,7 @@ local function getVehicleDetails()
 			end
 		end
 
-		-- Route display check
+		-- Route display check with fallback checks
 		local numLabel = body:FindFirstChild("Display")
 			and body.Display:FindFirstChild("Model")
 			and body.Display.Model:FindFirstChild("Rt")
@@ -83,7 +83,6 @@ local function getVehicleDetails()
 		end
 	end)
 
-	-- Clean up empty spaces
 	if plateStr == "" or plateStr == " " then plateStr = "Blank" end
 	if fleetStr == "" or fleetStr == " " then fleetStr = "Blank" end
 	if routeStr == "" or routeStr == " " then routeStr = "Blank" end
