@@ -51,10 +51,10 @@ local function getVehicleDetails()
 
 		if fleetModel then
 			if fleetModel:FindFirstChild("F1") and fleetModel.F1:FindFirstChild("SurfaceGui") then
-				plateStr = fleetModel.F1.SurfaceGui.Text.Text
+				plateStr = fleetModel.F1.SurfaceGui.Text.Text or fleetModel.F1.SurfaceGui.TextLabel.Text
 			end
 			if fleetModel:FindFirstChild("FN") and fleetModel.FN:FindFirstChild("SurfaceGui") then
-				fleetStr = fleetModel.FN.SurfaceGui.Text.Text
+				fleetStr = fleetModel.FN.SurfaceGui.Text.Text or fleetModel.FN1.SurfaceGui.TextLabel.Text
 			end
 		end
 
