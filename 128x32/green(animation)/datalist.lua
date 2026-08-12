@@ -367,15 +367,15 @@ while wait() do
 	elseif script.Parent.Model.Rt.R.Num.Text == "94AZ" then
 		show("rbxassetid://131655000971587","rbxassetid://95760011531072","rbxassetid://110753327838160")
 		wait(4)
-		show("rbxassetid://131431214608171","rbxassetid://100654340439511","rbxassetid://110753327838160")
+		show("rbxassetid://131431214608171","rbxassetid://95760011531072","rbxassetid://110753327838160")
 		wait(4)
-		show("rbxassetid://73582168156141","rbxassetid://100654340439511","rbxassetid://110753327838160")
+		show("rbxassetid://73582168156141","rbxassetid://95760011531072","rbxassetid://110753327838160")
 		wait(4)
-		show("rbxassetid://96048284795449","rbxassetid://100654340439511","rbxassetid://110753327838160")
+		show("rbxassetid://96048284795449","rbxassetid://95760011531072","rbxassetid://110753327838160")
 		wait(4)
-		show("rbxassetid://116847717009360","rbxassetid://100654340439511","rbxassetid://110753327838160")
+		show("rbxassetid://116847717009360","rbxassetid://95760011531072","rbxassetid://110753327838160")
 		wait(4)
-		show("rbxassetid://107772049579699","rbxassetid://100654340439511","rbxassetid://110753327838160")
+		show("rbxassetid://107772049579699","rbxassetid://95760011531072","rbxassetid://110753327838160")
 		wait(4)
 		
 	elseif script.Parent.Model.Rt.R.Num.Text == "94CY" then
@@ -868,16 +868,17 @@ while wait() do
 		show("rbxassetid://97307037383287","rbxassetid://79150867535938","rbxassetid://132326664988137")
 		
 	elseif script.Parent.Model.Rt.R.Num.Text == "38HY" then
-		show("rbxassetid://75149418621729","rbxassetid://134720780599659","rbxassetid://83316645845211")
+		show("rbxassetid://118536411486803","rbxassetid://135301940779926","rbxassetid://83316645845211")
 		wait(4)
 		show("rbxassetid://106554678078276","rbxassetid://80415659721895","rbxassetid://83316645845211")
 		wait(4)
 		
 	elseif script.Parent.Model.Rt.R.Num.Text == "38HZ" then
-		show("rbxassetid://110863626911377","rbxassetid://83202378955018","rbxassetid://83316645845211")
+		show("rbxassetid://75149418621729","rbxassetid://134720780599659","rbxassetid://83316645845211")
 		wait(4)
 		show("rbxassetid://106554678078276","rbxassetid://80415659721895","rbxassetid://83316645845211")
 		wait(4)
+		
 		
 	elseif script.Parent.Model.Rt.R.Num.Text == "38PY" then
 		show("rbxassetid://1303564928001733","rbxassetid://76442992180149","rbxassetid://119447962718553")
@@ -1161,4 +1162,5 @@ while wait() do
 
 	end
 
+end
 end
