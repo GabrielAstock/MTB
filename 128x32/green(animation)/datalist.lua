@@ -16,7 +16,7 @@ while wait() do
 
 
 	if script.Parent.Model.Rt.R.Num.Text == "V" then
-		show("rbxassetid://72307481305076","rbxassetid://137196837620892","rbxassetid://74469042638066")
+		show("rbxassetid://112823549909262","rbxassetid://103667951029106","rbxassetid://80077479038662")
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "NIS" then
 		show("https://assetgame.roblox.com/asset/?id=14657683006&assetName=NIS %281%29","https://assetgame.roblox.com/asset/?id=14683244875&assetName=NIS %282%29","https://assetgame.roblox.com/asset/?id=14657903604&assetName=MTB %281%29")
@@ -814,7 +814,7 @@ while wait() do
 		show("https://assetgame.roblox.com/asset/?id=14657729475&assetName=S2","rbxassetid://129238386104084","https://assetgame.roblox.com/asset/?id=14657911571&assetName=SE %281%29")
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "S2Y" then
-		show("https://assetgame.roblox.com/asset/?id=14657729198&assetName=S2Y","https://assetgame.roblox.com/asset/?id=14683299093&assetName=S2Y %281%29","https://assetgame.roblox.com/asset/?id=14657911571&assetName=SE %281%29")
+		show("https://assetgame.roblox.com/asset/?id=14657729198&assetName=S2Y","rbxassetid://135913525981142","https://assetgame.roblox.com/asset/?id=14657911571&assetName=SE %281%29")
 		wait(4)
 		show("https://assetgame.roblox.com/asset/?id=14657728983&assetName=S2Y_","rbxassetid://135913525981142","https://assetgame.roblox.com/asset/?id=14657911571&assetName=SE %281%29")
 		wait(4)
@@ -885,6 +885,12 @@ while wait() do
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "38PZ" then
 		show("rbxassetid://138625660696926","rbxassetid://119282243168120","rbxassetid://119447962718553")
+		
+	elseif script.Parent.Model.Rt.R.Num.Text == "60Y" then
+		show("rbxassetid://130339275584769","rbxassetid://100406718568221","rbxassetid://119782149501340")
+
+	elseif script.Parent.Model.Rt.R.Num.Text == "60Z" then
+		show("rbxassetid://93498893237152","rbxassetid://124794829965922","rbxassetid://119782149501340")
 
 	elseif script.Parent.Model.Rt.R.Num.Text == "280" then
 		show("https://assetgame.roblox.com/asset/?id=14657733014&assetName=280","rbxassetid://95730606807113","https://assetgame.roblox.com/asset/?id=14657912824&assetName=280 %281%29")
@@ -1161,5 +1167,7 @@ while wait() do
 		--script.Parent.Rear.R.Num.Text = script.Parent.Model.Rt.R.Num.Text
 
 	end
+
+end
 
 end
