@@ -1169,5 +1169,3 @@ while wait() do
 	end
 
 end
-
-end
