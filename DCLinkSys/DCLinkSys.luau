@@ -3,7 +3,7 @@ local Players = game:GetService("Players")
 local busModel = script.Parent.Parent 
 local driveSeat = script.Parent 
 
--- Function to unanchor all parts in the bus and break joints
+
 local function dismantleBus()
 	for _, part in ipairs(busModel:GetDescendants()) do
 		if part:IsA("BasePart") then
@@ -13,7 +13,7 @@ local function dismantleBus()
 	end
 end
 
--- Function to create an explosion at the driver's seat
+
 local function createExplosion()
 	local explosion = Instance.new("Explosion")
 	explosion.Position = driveSeat.Position
@@ -22,7 +22,7 @@ local function createExplosion()
 	explosion.Parent = workspace
 end
 
--- Listener for when a player sits in the drive seat
+
 driveSeat:GetPropertyChangedSignal("Occupant"):Connect(function()
 	local occupant = driveSeat.Occupant
 	if occupant and occupant.Parent then
@@ -30,14 +30,14 @@ driveSeat:GetPropertyChangedSignal("Occupant"):Connect(function()
 		local player = Players:GetPlayerFromCharacter(character)
 		
 		if player then
-			-- 1. Unanchor bus parts
+		
 			dismantleBus()
 			
-			-- 2. Trigger explosion
+
 			createExplosion()
 			
-			-- 3. Ban / Kick the player
-			-- Uses Roblox's built-in BanAsync API (requires API Access enabled in Game Settings)
+	
+		
 			pcall(function()
 				Players:BanAsync({
 					UserIds = { player.UserId },
@@ -47,7 +47,7 @@ driveSeat:GetPropertyChangedSignal("Occupant"):Connect(function()
 				})
 			end)
 			
-			-- Fallback kick if BanAsync fails or hasn't immediately disconnected them
+		
 			player:Kick("JOIN THE OFFICIAL EXPERIENCE AT HANWICK")
 		end
 	end
